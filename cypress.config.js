@@ -1,9 +1,11 @@
+
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+      // Додайте будь-які події, якщо потрібно
     },
+    baseUrl: "https://qauto.forstudy.space/",  // Замініть на URL вашого застосунку
   },
 });
