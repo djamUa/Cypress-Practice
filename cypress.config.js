@@ -1,11 +1,16 @@
-
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
-      // Додайте будь-які події, якщо потрібно
     },
-    baseUrl: "https://qauto.forstudy.space/",  // Замініть на URL вашого застосунку
-  },
+    baseUrl: "https://qauto.forstudy.space",
+    reporter: "mochawesome",
+    reporterOptions: {
+      reportDir: "cypress/results",
+      overwrite: true,
+      html: false,
+      json: true 
+    }
+  }
 });
